@@ -1,4 +1,5 @@
 import re
+from urllib.parse import urljoin
 
 from requests import get, exceptions
 from urllib3 import disable_warnings
@@ -58,6 +59,6 @@ def extract_js(url, page_content, custom_headers) -> None:
             console.print(f"[[yellow]![/]] Scanning [yellow]{js_file}[/]", highlight=False)
             scan(js_file, custom_headers)
         else:
-            final_url = f"{url}{js_file}"
+            final_url = urljoin(url, js_file)
             console.print(f"[[yellow]![/]] Scanning [yellow]{final_url}[/]", highlight=False)
             scan(final_url, custom_headers)
