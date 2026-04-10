@@ -118,7 +118,7 @@ _PATTERNS: dict = {
     "Authorization Bearer": compile(r'[Bb]earer [a-zA-Z0-9_\-\.=]+'),
     "Authorization Basic": compile(r'[Bb]asic [a-zA-Z0-9=:_\+/\-]{5,100}'),
     "JWT Token": compile(
-        r'ey[A-Za-z0-9\-_=]+\.[A-Za-z0-9\-_=]+\.[A-Za-z0-9\-_.+/=]+'
+        r'eyJ[A-Za-z0-9\-_=]+\.[A-Za-z0-9\-_=]+\.[A-Za-z0-9\-_.+/=]+'
     ),
 
     # Private keys
